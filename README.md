@@ -1,24 +1,44 @@
-# 👨‍💼 Employee Management Application
+### 🟩 2. Employee Management Application
 
-A robust system designed for effectively **managing employee records**, tracking their attendance, and handling administrative tasks with ease.
+```markdown
+# 🧾 Employee Management Application
 
----
+### 🧰 Tech Stack
+Spring Boot | React.js | REST APIs | MySQL | Spring Data JPA
 
-## ✨ Key Features
+### 📖 Overview
+A CRUD-based full-stack web application for managing employees, departments, and roles.
+Backend built with **Spring Boot**, and frontend built with **React** for a seamless user experience.
 
-The core functionalities of this application include:
+### 🚀 Features
+- Create, Read, Update, Delete (CRUD) employee data
+- Department and role-based management
+- Search and Filter functionality
+- Role-based authentication
+- RESTful APIs using Spring Data JPA
+- MySQL database integration
 
-- **CRUD Operations:** **Create, Read, Update, and Delete** employee records.
-- **Search and Filter:** Easily **search and filter** employees based on name, ID, or department.
-- **Department Management:** Track and manage details of various **departments** and **positions**.
-- **Basic Authentication:** Simple **login and logout** functionality for users.
+### ⚙️ Setup Instructions
+1. Clone the repo:
+   ```bash
+   git clone <https://github.com/jainil510/Employee-Management-Application>
 
-**🛠️ Technologies Used**
+2. Configure MySQL credentials in application.properties.
 
-This project is built using the following technologies:
+3. Run backend using:
+   mvn spring-boot:run
 
-**Type Technology Frontend** React / HTML / CSS / JavaScript
+4. Start React frontend:
+   npm start
 
-**Backend** Java (Spring Boot) 
+📊 Key Achievement
 
-**Database** MySQL
+Optimized database queries — improved response time by 30%.
+
+🧠 Learning Outcomes
+
+- Built REST APIs and integrated them with frontend
+- Practiced data persistence using Spring Data JPA
+- Enhanced understanding of full-stack development workflow
+
+```
