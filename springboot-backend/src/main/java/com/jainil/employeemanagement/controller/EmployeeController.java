@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -30,8 +32,8 @@ public class EmployeeController {
 	
 	// get all employees
 	@GetMapping("/employees")
-	public List<Employee> getAllEmployees(){
-		return employeeRepository.findAll();
+	public Page<Employee> getAllEmployees(Pageable pageable){
+		return employeeRepository.findAll(pageable);
 	}		
 	
 	// create employee rest api
