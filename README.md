@@ -33,7 +33,7 @@ A full-stack web application for managing employees, built with a Spring Boot ba
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-link>
+    git clone <(https://github.com/jainil510/Employee-Management-Application)>
     cd springboot-backend
     ```
 
