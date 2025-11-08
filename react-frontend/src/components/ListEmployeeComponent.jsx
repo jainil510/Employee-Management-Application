@@ -6,11 +6,13 @@ class ListEmployeeComponent extends Component {
         super(props)
 
         this.state = {
-                employees: []
+                employees: [],
+                department: ''
         }
         this.addEmployee = this.addEmployee.bind(this);
         this.editEmployee = this.editEmployee.bind(this);
         this.deleteEmployee = this.deleteEmployee.bind(this);
+        this.searchEmployees = this.searchEmployees.bind(this);
     }
 
     deleteEmployee(id){
@@ -35,12 +37,27 @@ class ListEmployeeComponent extends Component {
         this.props.history.push('/add-employee/_add');
     }
 
+    searchEmployees() {
+        EmployeeService.getEmployeesByDepartment(this.state.department)
+            .then(res => {
+                this.setState({ employees: res.data });
+            })
+    }
+    
+    handleDepartmentChange = (event) => {
+        this.setState({ department: event.target.value });
+    }
+
     render() {
         return (
             <div>
                  <h2 className="text-center">Employees List</h2>
                  <div className = "row">
                     <button className="btn btn-primary" onClick={this.addEmployee}> Add Employee</button>
+                    <div style={{marginLeft: "10px"}}>
+                        <input type="text" placeholder="Search by department" value={this.state.department} onChange={this.handleDepartmentChange} />
+                        <button className="btn btn-info" onClick={this.searchEmployees}>Search</button>
+                    </div>
                  </div>
                  <br></br>
                  <div className = "row">
